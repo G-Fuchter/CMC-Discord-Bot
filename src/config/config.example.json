@@ -1,3 +1,4 @@
 {
-    "discordToken": "TokenValue"
+    "discordToken": "TokenValue",
+    "commandPrefix": "/"
 }
