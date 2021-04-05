@@ -7,6 +7,7 @@ const {
   getCommandArguments,
 } = require("./utils/messageParsing");
 const { loadCommands } = require("./utils/commandLoading");
+const DeckService = require("./services/deckService");
 
 const client = new Discord.Client();
 
