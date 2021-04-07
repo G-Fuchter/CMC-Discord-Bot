@@ -118,3 +118,6 @@ dist
 # config
 src/config/config.json
 src/config/spreadsheets.json
+
+#data
+src/data/
