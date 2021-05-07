@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodes index.js"
+    "start": "node index.js"
   },
   "author": "Ian Wohlgemuth and Guillermo Pedro Fuchter",
   "license": "ISC",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "discord.js": "^12.5.1",
+    "dotenv": "^9.0.0",
     "google-spreadsheet": "^3.1.15"
   }
 }

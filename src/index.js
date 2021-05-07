@@ -1,13 +1,11 @@
-const fs = require("fs");
-const path = require("path");
+require("dotenv").config();
 const Discord = require("discord.js");
-const Config = require("./config/config.json");
+const Config = require("./config/config.js");
 const {
   getCommandName,
   getCommandArguments,
 } = require("./utils/messageParsing");
 const { loadCommands } = require("./utils/commandLoading");
-const DeckService = require("./services/deckService");
 
 const client = new Discord.Client();
 

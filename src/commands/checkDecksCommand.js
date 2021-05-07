@@ -9,7 +9,6 @@ const checkDecksCommand = {
     console.log("Decks checked");
     msg.reply(`${args} decks are in the console boss :0` + "\n" + "`"+ discordMessage + "`");
     console.log(discordMessage);
-    //msg.reply(`${args} decks are in the console boss :0` + discordMessage);
   },
 };
 
