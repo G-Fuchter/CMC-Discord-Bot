@@ -7,8 +7,6 @@ const {
 } = require("./utils/messageParsing");
 const { loadCommands } = require("./utils/commandLoading");
 
-console.log(Config);
-
 const client = new Discord.Client();
 
 const commands = loadCommands(`${__dirname}/commands`);
