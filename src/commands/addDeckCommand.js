@@ -4,9 +4,9 @@ const config = require("../config/config.json");
 const addDeckCommand = {
   name: "add",
   async execute(msg, args) {
-    console.log("Adding deck");
+    console.log("Adding decks");
     await deckService.addDeck(args);
-    msg.reply(`${args} deck added! :0`);
+    msg.reply(`${args} decks added! :0`);
     console.log("Deck added");
   },
 };
