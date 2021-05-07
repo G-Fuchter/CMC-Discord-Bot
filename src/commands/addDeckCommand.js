@@ -1,5 +1,4 @@
 const deckService = require("../services/deckService");
-const config = require("../config/config.json");
 
 const addDeckCommand = {
   name: "add",

@@ -1,5 +1,5 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const Config = require("../config/config.json");
+const Config = require("../config/config.js");
 
 class DeckService {
   constructor(spreadsheetConfig) {
