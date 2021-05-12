@@ -1,11 +1,14 @@
 {
   "name": "discord-current-meta-collector",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "description": "Discord bot that collects information on the MTG meta",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "Ian Wohlgemuth and Guillermo Pedro Fuchter",
   "license": "ISC",
@@ -14,6 +17,7 @@
   },
   "dependencies": {
     "discord.js": "^12.5.1",
+    "dotenv": "^9.0.0",
     "google-spreadsheet": "^3.1.15"
   }
 }

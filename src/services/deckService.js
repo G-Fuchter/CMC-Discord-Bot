@@ -1,6 +1,6 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const Config = require("../config/config.json");
 const JsonStorageService = require("./jsonStorageService");
+const Config = require("../config/config.js");
 
 class DeckService {
   constructor(spreadsheetConfig) {
@@ -54,8 +54,39 @@ class DeckService {
     }
     return cells;
   };
+
+  checkDecks = async () => {
+    const sheet = this.doc.sheetsByIndex[0];
+
+    await sheet.loadCells("O4:O80");
+    await sheet.loadCells("X4:X80");
+
+    //SHOWS DECKS IN an array in discordMessage with their respective number and meta%
+    let discordMessage = "";
+
+    for (let i = 4; i < 14; i++) {
+      const currentDeckCell = sheet.getCellByA1(`O${i}`)._rawData
+        .formattedValue;
+      const currentDeckPercentage = sheet.getCellByA1(`X${i}`)._rawData
+        .formattedValue;
+      if (!currentDeckCell) {
+        break;
+      }
+
+      discordMessage =
+        discordMessage +
+        (i -
+          3 +
+          "." +
+          " " +
+          currentDeckPercentage +
+          " " +
+          currentDeckCell +
+          "\n");
+    }
+    return discordMessage;
+  };
 }
-
 const deckService = new DeckService(Config.spreadsheet);
-
+deckService.initialize();
 module.exports = deckService;

@@ -1,7 +1,6 @@
-const fs = require("fs");
-const path = require("path");
+require("dotenv").config();
 const Discord = require("discord.js");
-const Config = require("./config/config.json");
+const Config = require("./config/config.js");
 const {
   getCommandName,
   getCommandArguments,
